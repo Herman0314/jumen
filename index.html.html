@@ -1,29 +1,234 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>Jumen 首頁</title>
-    <style>
-        body {
-            background-color: #111;
-            color: #eee;
-            font-family: sans-serif;
-            text-align: center;
-            padding-top: 20vh;
-        }
-        a {
-            font-size: 24px;
-            color: #90f;
-            text-decoration: none;
-            border: 2px solid #90f;
-            padding: 10px 20px;
-            border-radius: 8px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>幾億光年 - 歌詞學習</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #f5f5f5;
+      font-family: 'Noto Sans JP', sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    video {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .lyrics-block {
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .line {
+      margin-bottom: 15px;
+      cursor: pointer;
+      transition: background 0.3s;
+      padding: 6px;
+      border-radius: 5px;
+    }
+    .line:hover {
+      background-color: #333;
+    }
+    .line.active {
+      background-color: #1db954;
+      color: black;
+    }
+    .translation {
+      font-size: 14px;
+      color: #bbbbbb;
+    }
+    .controls {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-    <h1>歡迎來到 Jumen 🎵</h1>
-    <p><a href="/giyoku/index.html">進入《幾億光年》學習頁</a></p>
+  <div class="container">
+    <h1>幾億光年</h1>
+    <h2>Omoinotake</h2>
+
+    <video id="video" controls>
+      <source src="koioku.mp4" type="video/mp4">
+      您的瀏覽器不支援影片播放。
+    </video>
+
+    <div class="controls">
+      <label for="speed">播放速度：</label>
+      <select id="speed">
+        <option value="0.75">0.75x</option>
+        <option value="1" selected>1x</option>
+        <option value="1.25">1.25x</option>
+      </select>
+    </div>
+
+    <div class="lyrics-block" id="lyrics">
+      
+    <div class="line" data-start="16">もういちどさ　声（こえ）を聴（き）かせてよ<br><span class="translation">再一次　讓我聽聽你的聲音吧</span></div>
+    
+    <div class="line" data-start="21">めくれないままでいる<br><span class="translation">依舊無法翻開的</span></div>
+    
+    <div class="line" data-start="23">夏（なつ）の日（ひ）のカレンダー<br><span class="translation">夏日的月曆</span></div>
+    
+    <div class="line" data-start="26">ただいまってさ<br><span class="translation">說聲「我回來了」</span></div>
+    
+    <div class="line" data-start="28">笑（わら）ってみせてよ<br><span class="translation">並笑一個給我看吧</span></div>
+    
+    <div class="line" data-start="31">送（おく）り先（さき）（さき）もわからない<br><span class="translation">我連送達的去處都不知道</span></div>
+    
+    <div class="line" data-start="33">忘（わす）れものばかりだ<br><span class="translation">且總是忘東忘西</span></div>
+    
+    <div class="line" data-start="36">ココロが壊（こわ）れる音（おと）が聴こえて<br><span class="translation">我聽見了內心壞掉的聲音</span></div>
+    
+    <div class="line" data-start="41">どれだけ君（きみ）を愛（あい）していたか知（し）って<br><span class="translation">請知道我有多麼愛你</span></div>
+    
+    <div class="line" data-start="47">もう二度（にど）とは<br><span class="translation">懷抱著不會再次增加的</span></div>
+    
+    <div class="line" data-start="49">増（ふ）やせない<br><span class="translation">懷抱著不會再次增加的（續）</span></div>
+    
+    <div class="line" data-start="51">思（おも）い出（で）を抱（だ）いて　生（い）きて<br><span class="translation">回憶　並活下去吧</span></div>
+    
+    <div class="line" data-start="55">デイバイデイ<br><span class="translation">每一天</span></div>
+    
+    <div class="line" data-start="56">どんなスピードで追（お）いかけたら<br><span class="translation">我該以多快的速度去追趕</span></div>
+    
+    <div class="line" data-start="61">また君（きみ）と巡（めぐ）り逢（あ）えるだろう<br><span class="translation">才能再次遇見你呢</span></div>
+    
+    <div class="line" data-start="66">寄り添った日（ひ）々　生（い）きている意味（いみ）<br><span class="translation">依偎彼此的日子　活著的意義</span></div>
+    
+    <div class="line" data-start="70">くれたのは君（きみ）なんだよ<br><span class="translation">給予我這些的人是你啊</span></div>
+    
+    <div class="line" data-start="75">だから<br><span class="translation">所以</span></div>
+    
+    <div class="line" data-start="76">いつもココロで想い続けてる<br><span class="translation">我的內心總是一直在思念著你</span></div>
+    
+    <div class="line" data-start="81">まだ僕（ぼく）の声（こえ）は聴こえてる？<br><span class="translation">你是否還聽得見我的聲音呢？</span></div>
+    
+    <div class="line" data-start="86">止まらない日（ひ）々　君（きみ）に逢う旅（たび）<br><span class="translation">不會停止的日子　遇見你的旅途</span></div>
+    
+    <div class="line" data-start="90">よく似合（にあ）う笑（え）み浮かべて　待（ま）ってて<br><span class="translation">露出十分適合你的笑容　等著我吧</span></div>
+    
+    <div class="line" data-start="96">言えなかった胸（むね）の奥（おく）の言葉（ことば）<br><span class="translation">說不出口的內心深處的話語</span></div>
+    
+    <div class="line" data-start="102">いまなら　ありのまま君（きみ）に渡（わた）せる<br><span class="translation">現在的話　我可以將最真實的自己交給你</span></div>
+    
+    <div class="line" data-start="110">囁（ささや）けばさ　届（とど）けられた距離（きょり）<br><span class="translation">只要低聲細語　便能傳達出去的距離</span></div>
+    
+    <div class="line" data-start="115">ゼロセンチの指先（ゆびさき）で<br><span class="translation">總覺得我能</span></div>
+    
+    <div class="line" data-start="118">渡（わた）せた気（き）になってた<br><span class="translation">靠零距離的指尖傳達給你</span></div>
+    
+    <div class="line" data-start="121">どうしてかな　離（はな）れている方が<br><span class="translation">為什麼呢　明明拉開了距離</span></div>
+    
+    <div class="line" data-start="125">言葉（ことば）溢（あふ）れ出すのは<br><span class="translation">言語卻更加傾瀉而出</span></div>
+    
+    <div class="line" data-start="127">いまさらと笑（わら）って<br><span class="translation">已經為時已晚而不禁苦笑</span></div>
+    
+    <div class="line" data-start="130">君（きみ）だけ見（み）つけた　いつかの流星（りゅうせい）<br><span class="translation">只有你發現的　曾經的流星</span></div>
+    
+    <div class="line" data-start="135">どんな願（ねが）いを浮（う）かべていたのかな<br><span class="translation">你許下了什麼願望呢</span></div>
+    
+    <div class="line" data-start="141">あの日（ひ）君（きみ）が見上（みあ）げてた<br><span class="translation">我注視著那一天你仰望的</span></div>
+    
+    <div class="line" data-start="144">藍色（あいいろ）の先（さき）を見つめ<br><span class="translation">湛藍彼方</span></div>
+    
+    <div class="line" data-start="149">デイバイデイ<br><span class="translation">每一天</span></div>
+    
+    <div class="line" data-start="150">幾億年（いくおくねん）の距離（きょり）をこえて<br><span class="translation">都讓我們超越幾億年的距離</span></div>
+    
+    <div class="line" data-start="155">輝（かがや）きを伝（つた）う星（ほし）のように<br><span class="translation">就像閃耀流轉的星辰</span></div>
+    
+    <div class="line" data-start="160">変（か）わらない愛　確（たし）かなヒカリ<br><span class="translation">一成不變的愛　確實存在的光芒</span></div>
+    
+    <div class="line" data-start="164">届（とど）くまで願（ねが）い続（つづ）ける<br><span class="translation">直到傳達給你為止　我都會不斷祈願</span></div>
+    
+    <div class="line" data-start="169">だから<br><span class="translation">所以</span></div>
+    
+    <div class="line" data-start="170">いつか僕（ぼく）ら巡（めぐ）り逢（あ）えたなら<br><span class="translation">如果總有一天我們能遇見彼此的話</span></div>
+    
+    <div class="line" data-start="175">輝（かがや）きの中（なか）待（ま）ち合（あ）わせよう<br><span class="translation">便讓我們在　輝煌之中碰面吧</span></div>
+    
+    <div class="line" data-start="180">君（きみ）が迷子（まいご）にならないように<br><span class="translation">為了不讓你迷路</span></div>
+    
+    <div class="line" data-start="185">瞬（またた）きもせず　照（て）らして待ってる<br><span class="translation">我都會不閃爍地　持續發光</span></div>
+    
+    <div class="line" data-start="190">消えやしない　君（きみ）がくれた温（ぬく）もり<br><span class="translation">我將會緊緊抱住　不會消失的</span></div>
+    
+    <div class="line" data-start="196">抱きしめ　僕（ぼく）はいまを生（い）きていくから<br><span class="translation">你給予我的溫暖　並活在當下</span></div>
+    
+    <div class="line" data-start="210">名前（なまえ）を呼（よ）ぶよ　来る日（ひ）も来る日（ひ）も<br><span class="translation">我將會一天天地　呼喊你的名字</span></div>
+    
+    <div class="line" data-start="215">たえず叫（さけ）ぶよ　あのままの二人（ふたり）でいようよ<br><span class="translation">我將不止盡地呼喊　讓我們就保持那時候的模樣吧</span></div>
+    
+    <div class="line" data-start="224">デイバイデイ<br><span class="translation">每一天</span></div>
+    
+    <div class="line" data-start="225">どんなスピードで追（お）いかけたら<br><span class="translation">我該以多快的速度去追趕</span></div>
+    
+    <div class="line" data-start="230">また君（きみ）と巡（めぐ）り逢（あ）えるだろう<br><span class="translation">才能再次遇見你呢</span></div>
+    
+    <div class="line" data-start="235">わけあえた日（ひ）々　季節（きせつ）はふいに<br><span class="translation">能分享的日子　季節突然</span></div>
+    
+    <div class="line" data-start="240">君（きみ）だけを乗（の）せ　彼方（かなた）へ<br><span class="translation">只帶著你　駛向遠方</span></div>
+    
+    <div class="line" data-start="244">だから<br><span class="translation">所以</span></div>
+    
+    <div class="line" data-start="245">いつもココロで想い続けてる<br><span class="translation">我的內心總是一直在思念著你</span></div>
+    
+    <div class="line" data-start="250">まだ僕（ぼく）の声（こえ）は聴こえてる？<br><span class="translation">你是否還聽得見我的聲音呢？</span></div>
+    
+    <div class="line" data-start="255">進（すす）み出す日（ひ）々　目（め）を開（あ）けるたび<br><span class="translation">開始前進的日子　每當我睜開雙眼時</span></div>
+    
+    <div class="line" data-start="260">近（ちか）づいていく　運命（うんめい）と信（しん）じて<br><span class="translation">我相信命運　會讓我們彼此靠近</span></div>
+    
+    <div class="line" data-start="266">言えなかった胸（むね）の奥（おく）の言葉（ことば）<br><span class="translation">說不出口的內心深處的話語</span></div>
+    
+    <div class="line" data-start="271">いまなら　ありのまま君（きみ）に渡（わた）せる<br><span class="translation">現在的話　我可以將最真實的自己交給你</span></div>
+    
+    <div class="line" data-start="276">どれだけの時（とき）が流（なが）れても　永遠（えいえん）に<br><span class="translation">不管時間流逝多少　都永遠</span></div>
+    
+    <div class="line" data-start="282">過去形（かこけい）にならない「I Love You」<br><span class="translation">不會成為過去式的「I Love You」</span></div>
+    
+    </div>
+  </div>
+
+  <script>
+    const video = document.getElementById('video');
+    const speed = document.getElementById('speed');
+    const lines = document.querySelectorAll('.line');
+
+    speed.addEventListener('change', () => {
+      video.playbackRate = parseFloat(speed.value);
+    });
+
+    lines.forEach(line => {
+      line.addEventListener('click', () => {
+        const time = parseFloat(line.dataset.start);
+        video.currentTime = time;
+        video.play();
+      });
+    });
+
+    video.addEventListener('timeupdate', () => {
+      const currentTime = video.currentTime;
+      lines.forEach(line => {
+        const start = parseFloat(line.dataset.start);
+        const next = line.nextElementSibling ? parseFloat(line.nextElementSibling.dataset.start) : Infinity;
+        if (currentTime >= start && currentTime < next) {
+          line.classList.add('active');
+        } else {
+          line.classList.remove('active');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
